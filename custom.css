@@ -1,364 +1,360 @@
-@charset "UTF-8"; 
-/* import css files */ @import url("css/settings.css"); 
-@import url("css/icons_on_tabs.css"); 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans'); 
-/*var in way of change color*/ 
-:root { 
-/*use with var(--main-blue-clear-color)*/ --main-bg-color: #f1f1f1; 
---main-blue-color: #0b96cd; 
---main-blue-clear-color: #0bcdc7; 
---main-item-bg-color: #fff; 
---main-text-color: #000; 
---secondary-text-color: gray;
-}
+@charset "UTF-8";
+/* import css files */
+@import url("css/settings.css");
+@import url("css/icons_on_tabs.css");
+@import url("css/media_phone.css");
+@import url("css/media_tab.css");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
- /*///////////////////////////////// font range need font.css //////////////////////////////*/ 
-@font-face { 
-  font-family: main-font; 
-  src: url(font/OpenSans-Regular.ttf);  
-}
-
-@font-face { 
-  font-family: main-font-bold; 
-  src: url(font/OpenSans-SemiBold.ttf);  
+/*var in way of change color*/
+:root {
+  /*use with var(--main-blue-clear-color)*/
+  --main-bg-color: #f1f1f1; 
+  --main-blue-color: #0b96cd;
+  --main-blue-clear-color: #0bcdc7;
+  --main-item-bg-color: #fff;
+  --main-text-color: #000;
+  --secondary-text-color: gray;
 }
 
 
- /* Add fonts */
-.btnstylerev, .btnstyle, .btnstyle3-dis, .btnstyle3, .btnstyle3-sel .mHeaderBtn, .navbar-inverse .navbar-inner, .item #bigtext, .item #type, .item #lastupdate { 
-  font-family: main-font;  
+
+/*/////////////////////////////////   font range need font.css  //////////////////////////////*/
+@font-face {
+    font-family: main-font;
+    src: url(font/OpenSans-Regular.ttf);
+}
+@font-face {
+    font-family: main-font-bold;
+    src: url(font/OpenSans-SemiBold.ttf);
+}
+/* Add fonts */
+.btnstylerev,
+.btnstyle,
+.btnstyle3-dis,
+.btnstyle3,
+.btnstyle3-sel
+.mHeaderBtn,
+.navbar-inverse .navbar-inner,
+.item #bigtext,
+.item #type,
+.item #lastupdate {
+  font-family: main-font;
+}
+h2,
+#tophtm,
+#temptophtm,
+#weathertophtm,
+#lightcontent td,
+#utilitycontent td,
+.beforebannav,
+.machinoText,
+.mHeader,
+.item #status,
+.item #name {
+  font-family: main-font-bold;
+}
+#tabs,
+.span6,
+.span6,
+.span12,
+.page-header-small h1 {
+  font-family: main-font-bold;
+}
+/* aboutpage */
+#aboutcontent {
+  font-family: main-font;
 }
 
 
-h2, #tophtm, #temptophtm, #weathertophtm, #lightcontent td, #utilitycontent td, .beforebannav, .machinoText, .mHeader, .item #status, .item #name { 
-  font-family: main-font-bold;  
+/*/////////////////////////////////  body section   //////////////////////////////*/
+body {
+  background:#f1f1f1 !important;
+  color: #1a1a1a;
 }
 
-#tabs, .span6, .span6, .span12, .page-header-small h1 { 
-  font-family: main-font-bold;  
-}
-
-
-/* aboutpage */ 
-#aboutcontent { 
-  font-family: main-font;  
-}
-
-
- /*///////////////////////////////// slider and switch section //////////////////////////////*/ 
- /* bootstrap switcher */ 
- /* The switch - the box around the slider */ 
-.switch { 
-  position: absolute; 
-  display: block; 
-  width: 40px; 
-  height: 20px; 
-  top: 20px; 
-  right: 40px;  
-}
-
-
-.switch input { 
-  display: none;  
-}
-
-
- /* The slider */ 
-.switch .slider { 
-  position: absolute; 
-  cursor: pointer; 
-  top: 0; 
-  left: 0; 
-  right: 0; 
-  bottom: 0; 
-  background-color: #ccc; 
-  -webkit-transition: 0.4s; 
-  transition: 0.4s;  
-}
-
-
-.switch .slider:before { 
-  position: absolute; 
-  content: ""; 
-  
-  height: 26px; 
-  width: 26px; 
-  left: -10px; 
-  bottom: -2px; 
-  -webkit-transition: 0.4s; 
-  transition: 0.4s; 
-  background-color: #fafafa; 
-  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.7);  
-}
-
-
-.switch .slider.round { 
-  border-radius: 34px;  
-}
-
-
-.switch .slider.round:before { 
-  border-radius: 50%;  
-}
-
-
-.switch input:checked + .slider { 
-  background-color: rgba(11, 151, 205, 0.5);  
-}
-
-
-.switch input:checked + .slider:before { 
-  -webkit-transform: translateX(34px); 
-  -ms-transform: translateX(34px); 
-  transform: translateX(34px); 
-  background-color: var(--main-blue-color);  
-}
-
-
-.switch input:focus + .slider { 
-  box-shadow: 0 0 1px rgba(11, 151, 205, 0.5);  
-}
-
-
-/*///////////////////////////////// standy page section //////////////////////////////*/ 
-/* standby screen */ 
-.standby { 
-  background-image:none !important; 
-  background-color:#313131 !important;  
-}
-
-
-.standby .row { 
-  opacity: 0.4;  
-}
-
-
-.standbyClock { 
-  position: absolute; 
-  top: 50%; 
-  left: 50%; 
-  transform: translateX(-50%) translateY(-50%); 
-  color: #fff; 
-  font-size: 80px; 
-  font-family: main-font-bold; 
-  letter-spacing: 7px;  
-}
-
-
-.standbyDate { 
-  position: absolute; 
-  top: 40%; 
-  left: 50%; 
-  transform: translateX(-50%) translateY(-50%); 
-  color: #fff; 
-  font-size: 60px; 
-  font-family: main-font-bold; 
-  letter-spacing: 7px;  
-}
-
-
-.standby input[type="number"]{ width: 30px; 
-  background-color: transparent; 
-  outline: 0; 
-  border-width: 0 0 1px; 
-  border-color: var(--main-blue-color);  
-}
-
-@media screen and (max-width: 992px){ .standbyClock { 
-  font-size: 60px;  
-}
-
-
-.standbyDate { 
-  font-size: 40px;  
-}
-
-
-/*///////////////////////////////// option menu and icon section //////////////////////////////*/
-/* item subnav applying by click*/ 
-.options__bars { 
-  display: block; 
-  position: absolute; 
-  top: -5px; 
-  height: 30px; 
-  right: 10px; 
-  z-index: 2; 
-  overflow: hidden; 
-  width: 20px;  
-}
-
-
-.options__bars::before { 
-  display: block; 
-  color: var(--secondary-text-color); 
-  content: "…"; 
-  font-size: 20px; 
-  cursor: pointer;  
-}
-
-body table#itemtable tr > .options { 
-  display: none; 
-  padding: 8px;  
-}
-
-
-.options { 
-  font-family: main-font-bold; 
-  position: absolute; 
-  background: white; 
-  border-radius: 5px; 
-  right: 5px; 
-  top: 8px; 
-  box-shadow: -2px 2px 20px 0px rgba(0, 0, 0, 0.2); 
-  z-index: 1; 
-  display: none; 
-  padding: 8px; 
-  width:97px; 
-  height:flex;  
-}
-
-
-.options .btnsmall-sel { 
-  width: auto; 
-  background: transparent; 
-  color: green;  
-}
-
-
-.options .btnsmall { 
-  padding-top:4px; 
-  text-align: left; 
-  color: #818183;  
-}
-
-
-.timers_log{ display: inline; 
-  padding: 0px 5px;  
-}
-
-
-.timers_log .btnsmall, .timers_log .btnsmall-sel, .timers_log .btnsmall:hover, .timers_log .btnsmall-sel:hover { 
-  color: transparent;  
-}
-
-
-.timers_log .btnsmall[data-i18n="Log"] { 
-  font-size: 8px; 
-  position: absolute; 
-  right: 10px; 
-  bottom: 8px;  
-}
-
-
-.timers_log .btnsmall[data-i18n="Timers"] { 
-  font-size: 11px; 
-  position: absolute; 
-  right: 30px; 
-  bottom: 5px;  
-}
-
-
-.timers_log .btnsmall-sel[data-i18n="Timers"] { 
-  background: transparent; 
-  font-size: 11px; 
-  position: absolute; 
-  right: 30px; 
-  bottom: 6px;  
-}
-
-
-.timers_log .btnsmall[href*="/TemperatureLog"] { 
-  font-size: 8px; 
-  position: absolute; 
-  right: 10px; 
-  bottom: 8px;  
-}
-
-@media (min-width: 1200px) { 
-  .options { 
-  top: 5px;  
-}
-
-
-.timers_log .btnsmall[data-i18n="Timers"], .timers_log .btnsmall-sel[data-i18n="Timers"]{ bottom: 16px;  
-}
-
-
-.timers_log .btnsmall[href*="/TemperatureLog"], .timers_log .btnsmall[data-i18n="Log"]{ bottom:18px;  
-}
-
-  
-}
- /*///////////////////////////////// navbar section //////////////////////////////*/
+/*/////////////////////////////////  navbar section   //////////////////////////////*/
 /* Header */
 /*Hide Standart header logo*/
-.brand img, .brand h1, .brand h2 { 
-  display: none;  
+.brand img,
+.brand h1,
+.brand h2 {
+  display: none;
 }
 
-header.logo { 
-  background: var(--main-blue-clear-color); 
-  background: -moz-linear-gradient(left, var(--main-blue-clear-color) 0%, var(--main-blue-color) 100%); 
-  background: -webkit-gradient(left top, right top, color-stop(0%, var(--main-blue-clear-color)), color-stop(100%, var(--main-blue-color))); 
-  background: -webkit-linear-gradient(left, var(--main-blue-clear-color) 0%, var(--main-blue-color) 100%); 
-  background: -o-linear-gradient(left, var(--main-blue-clear-color) 0%, var(--main-blue-color) 100%); 
-  background: -ms-linear-gradient(left, var(--main-blue-clear-color) 0%, var(--main-blue-color) 100%); 
-  background: linear-gradient(to right, var(--main-blue-clear-color) 0%, var(--main-blue-color) 100%); 
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="var(--main-blue-clear-color)", endColorstr="var(--main-blue-color)", GradientType=1 );  
-}
-
-header .container-logo { 
-  padding: 0 5em; 
-  height: 40px; 
-  width: 100%; 
-  display: table-cell; 
-  /* comportement visuel de cellule */ vertical-align: middle;  
+header.logo {
+  background: var(--main-blue-clear-color);
+  background: -moz-linear-gradient(left, var(--main-blue-clear-color) 0%, var(--main-blue-color) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, var(--main-blue-clear-color)), color-stop(100%, var(--main-blue-color)));
+  background: -webkit-linear-gradient(left, var(--main-blue-clear-color) 0%, var(--main-blue-color) 100%);
+  background: -o-linear-gradient(left, var(--main-blue-clear-color) 0%, var(--main-blue-color) 100%);
+  background: -ms-linear-gradient(left, var(--main-blue-clear-color) 0%, var(--main-blue-color) 100%);
+  background: linear-gradient(to right, var(--main-blue-clear-color) 0%, var(--main-blue-color) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="var(--main-blue-clear-color)", endColorstr="var(--main-blue-color)", GradientType=1 );
+  width: auto;  
+  height: 40px;
+  padding: 0 10em;
 }
 
 
-.container-logo img.header__icon { 
-  width: 150px; 
-  transform: translateY(50%);  
-}
-
-
-.container-logo #searchInput { 
-    
-}
- /*///////////////////////////////// search section //////////////////////////////*/
-#searchInput { 
-  background-image: url('../images/searchicon.png'); 
-  background-color: transparent; 
-  background-position: 10px 12px; 
-  background-repeat: no-repeat; 
-  width: auto; 
-  font-size: 12px; 
-  color: #fff; 
-  padding: 12px 0px 8px 3em; 
-  outline: 0; 
-  border-width: 0 0 1px; 
-  border-color: #fff;  
-}
-
-#searchInput::placeholder { 
-  color: #fff; 
-  opacity: 0.5;  
-}
-
-
- /*///////////////////////////////// //////////////////////////////*/
-/*///////////////////////////////// //////////////////////////////*/
-/*///////////////////////////////// //////////////////////////////*/
-/*///////////////////////////////// //////////////////////////////*/ 
-body { 
-  background:#f1f1f1 !important; 
-  color: #1a1a1a;  
-}
-
-
-.bannercontent { 
+.container-logo img.header__icon {
+  display: inline-block;
+  float:left;
+  width: 150px;
   
-  display: block; 
-  /*padding: 90px 5em 0 5em !important;*/   
+  transform: translateY(50%);
+}
+ 
+#searchInput {
+  display: inline-block;
+  float:right;
+  padding: 12px 0px 8px 3em;
+  width: auto;
+  color: #fff;
+  outline: 0;
+  vertical-align: middle;
+  background-image: url('../images/searchicon.png');
+  background-color: transparent;
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  
+  font-size: 12px;
+  border-width: 0 0 1px;
+  border-color: #fff;
+}
+#searchInput::placeholder {
+  color: #fff;
+  opacity: 0.5;
 }
 
+
+
+
+
+
+/*///////////////////////////////// slider and switch section  //////////////////////////////*/
+/* bootstrap switcher */
+/* The switch - the box around the slider */
+.switch {
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 20px;
+  top: 20px;
+  right: 40px;
+}
+.switch input {
+  display: none;
+}
+
+/* The slider */
+.switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: -10px;
+  bottom: -2px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  background-color: #fafafa;
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.7);
+}
+.switch .slider.round {
+  border-radius: 34px;
+}
+.switch .slider.round:before {
+  border-radius: 50%;
+}
+
+.switch input:checked + .slider {
+  background-color: rgba(11, 151, 205, 0.5);
+}
+.switch input:checked + .slider:before {
+  -webkit-transform: translateX(34px);
+  -ms-transform: translateX(34px);
+  transform: translateX(34px);
+  background-color: var(--main-blue-color);
+}
+
+.switch input:focus + .slider {
+  box-shadow: 0 0 1px rgba(11, 151, 205, 0.5);
+}
+/*/////////////////////////////////  standy page section   //////////////////////////////*/
+/* standby screen */
+.standby {
+  background-image:none !important;
+  background-color:#313131 !important;
+}
+.standby .row {
+  opacity: 0.4;
+}
+
+.standbyClock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #fff;
+    font-size: 80px;
+    font-family: main-font-bold;
+    letter-spacing: 7px;
+}
+.standbyDate {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #fff;
+    font-size: 60px;
+    font-family: main-font-bold;
+    letter-spacing: 7px;
+}
+.standby input[type="number"]{
+  width: 30px;
+  background-color: transparent;
+  outline: 0;
+  border-width: 0 0 1px;
+  border-color: var(--main-blue-color);
+}
+
+@media screen and (max-width: 992px){
+  .standbyClock {
+    font-size: 60px;
+  }
+  .standbyDate {
+    font-size: 40px;
+  }
+}
+/*/////////////////////////////////  option menu and icon section   //////////////////////////////*/
+/* item subnav applying by click*/
+.options__bars {
+  display: block;
+  position: absolute;
+  top: -5px;
+  height: 30px;
+  right: 10px;
+  z-index: 2;
+  overflow: hidden;
+  width: 20px;
+}
+.options__bars::before {
+  display: block;
+  color: var(--secondary-text-color);
+  content: "…";
+  font-size: 20px;
+  cursor: pointer;
+}
+
+body table#itemtable tr > .options {
+  display: none;
+  padding: 8px;
+}
+
+.options {
+  font-family: main-font-bold;
+  position: absolute;
+  background: white;
+  border-radius: 5px;
+  right: 5px;
+  top: 8px;
+  box-shadow: -2px 2px 20px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  display: none;
+  padding: 8px;
+  width:97px;
+  height:flex;
+
+}
+.options .btnsmall-sel {
+  width: auto;
+  background: transparent;
+  color: green;
+}
+.options .btnsmall {
+  padding-top:4px;
+  text-align: left;
+  color: #818183;
+}
+.timers_log{
+  display: inline;
+  padding: 0px 5px;
+}
+.timers_log .btnsmall,
+.timers_log .btnsmall-sel,
+.timers_log .btnsmall:hover,
+.timers_log .btnsmall-sel:hover {
+  color: transparent;
+}
+.timers_log .btnsmall[data-i18n="Log"] {
+  font-size: 8px;
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+}
+
+.timers_log .btnsmall[data-i18n="Timers"] {
+  font-size: 11px;
+  position: absolute;
+  right: 30px;
+  bottom: 5px;
+
+}
+.timers_log .btnsmall-sel[data-i18n="Timers"] {
+  background: transparent;
+  font-size: 11px;
+  position: absolute;
+  right: 30px;
+  bottom: 6px;
+}
+.timers_log .btnsmall[href*="/TemperatureLog"] {
+  font-size: 8px;
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+}
+
+@media (min-width: 1200px) {
+  .options {
+    top: 5px;
+  }
+  .timers_log .btnsmall[data-i18n="Timers"],
+  .timers_log .btnsmall-sel[data-i18n="Timers"]{
+  bottom: 16px;  
+  }
+  .timers_log .btnsmall[href*="/TemperatureLog"],
+  .timers_log .btnsmall[data-i18n="Log"]{
+  bottom:18px;
+  }
+}
+
+
+
+/*/////////////////////////////////     //////////////////////////////*/
+
+/*/////////////////////////////////     //////////////////////////////*/
+
+/*/////////////////////////////////     //////////////////////////////*/
+
+/*/////////////////////////////////     //////////////////////////////*/
+
+
+
+
+
+
+.bannercontent {
+  display: block;
+  /*padding: 90px 5em 0 5em !important;*/
+}
