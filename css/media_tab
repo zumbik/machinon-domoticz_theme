@@ -1,1 +1,11 @@
 
+@media screen and (min-width: 680px) and (max-width: 992px){ 
+ .standbyClock { 
+    font-size: 60px;  
+  }
+
+
+  .standbyDate { 
+    font-size: 40px;  
+  }
+}
