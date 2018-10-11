@@ -8,7 +8,7 @@
 
 /*var in way of change color*/
 :root {
-  /*use with var(--main-blue-clear-color)*/
+  /*use with var(--main-bg-color)*/
   --main-bg-color: #f1f1f1; 
   --main-blue-color: #0b96cd;
   --main-blue-clear-color: #0bcdc7;
@@ -69,20 +69,28 @@ h2,
 
 /*/////////////////////////////////  body section   //////////////////////////////*/
 body {
-  background:#f1f1f1 !important;
+  background:var(--main-bg-color) !important;
   color: #1a1a1a;
 }
 
 /*/////////////////////////////////  navbar section   //////////////////////////////*/
 /* Header */
 /*Hide Standart header logo*/
-.brand img,
-.brand h1,
-.brand h2 {
+.navbar .brand img,
+.navbar .brand h1,
+.navbar .brand h2 {
   display: none;
 }
-
-header.logo {
+/*make container navbar to good height and good bg color*/
+.navbar .container-logo {
+  width: auto;  
+  height: 40px;
+  padding: 0 10%;
+  
+ display: flex; /* contexte sur le parent */
+  flex-direction: row; /* direction d'affichage verticale */
+  justify-content: space-between; /* alignement vertical */
+  
   background: var(--main-blue-clear-color);
   background: -moz-linear-gradient(left, var(--main-blue-clear-color) 0%, var(--main-blue-color) 100%);
   background: -webkit-gradient(left top, right top, color-stop(0%, var(--main-blue-clear-color)), color-stop(100%, var(--main-blue-color)));
@@ -91,45 +99,55 @@ header.logo {
   background: -ms-linear-gradient(left, var(--main-blue-clear-color) 0%, var(--main-blue-color) 100%);
   background: linear-gradient(to right, var(--main-blue-clear-color) 0%, var(--main-blue-color) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="var(--main-blue-clear-color)", endColorstr="var(--main-blue-color)", GradientType=1 );
-  width: auto;  
-  height: 40px;
-  padding: 0 10em;
 }
 
-
-.container-logo img.header__icon {
-  display: inline-block;
-  float:left;
+/*make navbar icon*/
+.navbar .container-logo img.header__icon {
   width: 150px;
-  
-  transform: translateY(50%);
+  height: auto;
+  margin:auto 0;
 }
- 
-#searchInput {
-  display: inline-block;
-  float:right;
-  padding: 12px 0px 8px 3em;
-  width: auto;
+
+ /*make navbar input for search*/
+.navbar #searchInput {
+  height: auto;
+  margin: auto 0;
+  padding: 5px 20px;
+  
   color: #fff;
+  font-size: 12px;
+  border: none;
+  border-bottom: 1px solid white;
   outline: 0;
-  vertical-align: middle;
-  background-image: url('../images/searchicon.png');
+  
   background-color: transparent;
-  background-position: 10px 12px;
+  background-image: url('../images/searchicon.png');
+  background-position: 7px 6px;
   background-repeat: no-repeat;
   
-  font-size: 12px;
-  border-width: 0 0 1px;
-  border-color: #fff;
 }
-#searchInput::placeholder {
-  color: #fff;
-  opacity: 0.5;
+.navbar #searchInput::placeholder {
+  color: #fff 0.5;
+  text-align: center;
 }
 
-
-
-
+.navbar #searchInput::focus {
+    display: none;
+  }
+.navbar button.menu-toggle {
+  display:none;
+  height: auto;
+  margin: auto 0;
+  background-color: transparent;
+  
+  border: none;
+  background-image: "≡";
+}
+.navbar .menu-toggle::before {
+  content: "≡";
+  font-size: 150%;
+  color: white;
+}
 
 
 /*///////////////////////////////// slider and switch section  //////////////////////////////*/
@@ -229,14 +247,6 @@ header.logo {
   border-color: var(--main-blue-color);
 }
 
-@media screen and (max-width: 992px){
-  .standbyClock {
-    font-size: 60px;
-  }
-  .standbyDate {
-    font-size: 40px;
-  }
-}
 /*/////////////////////////////////  option menu and icon section   //////////////////////////////*/
 /* item subnav applying by click*/
 .options__bars {
@@ -343,11 +353,40 @@ body table#itemtable tr > .options {
 
 /*/////////////////////////////////     //////////////////////////////*/
 
-/*/////////////////////////////////     //////////////////////////////*/
+/*/////////////////////////////////    //////////////////////////////*/
 
-/*/////////////////////////////////     //////////////////////////////*/
+/*/////////////////////////////////  media tab and phone   //////////////////////////////*/
+@media screen and (max-width: 992px){
+  header.logo {
+    padding: 0 2%;
+  }
+  .container-logo img.header__icon{
 
-/*/////////////////////////////////     //////////////////////////////*/
+  }
+
+   .standbyClock {
+    font-size: 60px;
+  }
+  .standbyDate {
+    font-size: 40px;
+  }
+  .navbar #searchInput {
+    width:0px;
+    padding: 5px 15px;
+    transition: 500ms;
+  }
+  .navbar #searchInput:focus {
+    width: 150px;
+    padding: 5px 20px;
+  }
+  .navbar button.menu-toggle {
+  display:block;
+  }
+  
+  
+  
+}
+/*/////////////////////////////////  media phone   //////////////////////////////*/
 
 
 
