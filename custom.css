@@ -78,10 +78,12 @@ body {
 /*Hide Standart header logo*/
 .navbar .brand img,
 .navbar .brand h1,
-.navbar .brand h2 {
+.navbar .brand h2,
+.navbar .brand hidden-phone {
   display: none;
 }
 /*make container navbar to good height and good bg color*/
+
 .navbar .container-logo {
   width: auto;  
   height: 40px;
@@ -114,7 +116,7 @@ body {
   margin: auto 0;
   padding: 5px 20px;
   
-  color: #fff;
+  color: white;
   font-size: 12px;
   border: none;
   border-bottom: 1px solid white;
@@ -127,13 +129,11 @@ body {
   
 }
 .navbar #searchInput::placeholder {
-  color: #fff 0.5;
+  color: white;
+  opacity: 0.5;
   text-align: center;
 }
 
-.navbar #searchInput::focus {
-    display: none;
-  }
 .navbar button.menu-toggle {
   display:none;
   height: auto;
@@ -149,10 +149,66 @@ body {
   color: white;
 }
 
+/*///////////////////////////////// nav bar //////////////////////////////*/
+
+
+.navbar a.brand{
+  display:none;
+}
+
+
+.navbar .navbar-inner {
+  background: white;
+  width: 100%;
+  border: none;
+  margin: 0;
+}
+
+.navbar-inner .container {
+  width: 100%;
+  margin: 0;
+  padding: 0 10%;
+}
+
+.navbar-inner #appnavbar {
+  float:left;
+  display:flex;
+  justify-content:space-between;
+  width:auto;
+  margin: 0;
+}
+
+.nav li a img {
+  display: none;
+}
+
+.navbar-inner #appnavbar > li a {
+  margin-right:30px;
+  background:transparent;
+  color: #1a1a1a;
+  text-shadow:none;
+  border:none;
+  border-radius:0;
+  border-bottom: 2px solid var(--main-blue-color);
+  flex-basis:auto;
+}
+
+.navbar-inner #appnavbar > li a:hover {
+  background:var(--main-blue-color);
+  color: #fff;
+}
+
+
 
 /*///////////////////////////////// slider and switch section  //////////////////////////////*/
+
+
+
 /* bootstrap switcher */
 /* The switch - the box around the slider */
+
+
+
 .switch {
   position: absolute;
   display: block;
@@ -392,6 +448,7 @@ body table#itemtable tr > .options {
 
 
 
+#holder {margin-top:90px;}
 
 .bannercontent {
   display: block;
