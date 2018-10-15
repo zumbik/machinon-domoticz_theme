@@ -134,20 +134,6 @@ body {
   text-align: center;
 }
 
-.navbar button.menu-toggle {
-  display:none;
-  height: auto;
-  margin: auto 0;
-  background-color: transparent;
-  
-  border: none;
-  background-image: "≡";
-}
-.navbar .menu-toggle::before {
-  content: "≡";
-  font-size: 150%;
-  color: white;
-}
 
 /*///////////////////////////////// nav bar //////////////////////////////*/
 
@@ -413,13 +399,8 @@ body table#itemtable tr > .options {
 
 /*/////////////////////////////////  media tab and phone   //////////////////////////////*/
 @media screen and (max-width: 992px){
-  header.logo {
-    padding: 0 2%;
-  }
-  .container-logo img.header__icon{
-
-  }
-
+#holder {margin-top:0px;}
+  
    .standbyClock {
     font-size: 60px;
   }
@@ -435,11 +416,25 @@ body table#itemtable tr > .options {
     width: 150px;
     padding: 5px 20px;
   }
-  .navbar button.menu-toggle {
+  
+ 
+/*button may move before icon to make a position more adjustable*/
+.navbar button.menu-toggle {
+  display: block;
+  position: absolute;
+  top:0;
+  height: 40px;
+  width: 40px;
+  border: none;
+  outline: 0 !important;
   display:block;
-  }
-  
-  
+  background-color: transparent;
+}
+.navbar button.menu-toggle::before {
+  content: "≡";
+  font-size: 200%;
+  color: white;
+}  
   
 }
 /*/////////////////////////////////  media phone   //////////////////////////////*/
@@ -448,7 +443,7 @@ body table#itemtable tr > .options {
 
 
 
-#holder {margin-top:90px;}
+
 
 .bannercontent {
   display: block;
