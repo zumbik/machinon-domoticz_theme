@@ -1,4 +1,4 @@
-let test = 1;
+var test = 1;
 console.log('Test: ' + test);
 test = test + 1;
 let target = {};
