@@ -1,33 +1,3 @@
-let target = {};
-let handler = {
-    get(target, propKey, receiver) {
-        console.log('get ' + propKey);
-        return 123;
-    }
-};
-let proxy = new Proxy(target, handler);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Custom.js for machinon theme */
 
 var theme = {};
@@ -87,6 +57,36 @@ document.addEventListener('DOMContentLoaded', function () {
 (function() {
 
 	$( document ).ready(function() {
+		
+		
+		
+		
+		
+
+let target = {};
+let handler = {
+	get(target, propKey, receiver) {
+	console.log('get ' + propKey);
+	return 123;
+	}
+};
+let proxy = new Proxy(target, handler);
+
+
+
+
+
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		if (!isMobile){ 
 		observer.observe(targetedNode, {
 			childList: true,
