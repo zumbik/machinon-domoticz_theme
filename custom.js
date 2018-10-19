@@ -1,21 +1,22 @@
 var test = 1;
-console.log('Test: ' + test);
-test = test + 1;
+console.log('Test ' + test);
+test += 1;
 let target = {};
 let handler = {
-console.log('Test: ' + test);
-test = test + 1;
+console.log('Test ' + test);
+test += 1;
 	get(target, propKey, receiver) {
-console.log('Test: ' + test);
-test = test + 1;
+console.log('Test ' + test);
+test += 1;
 	console.log('get ' + propKey);
 	return 123;
 	}
 };
 let proxy = new Proxy(target, handler);
 
-console.log('Test: ' + test);
-test = test + 1;
+console.log('Test ' + test);
+test += 1;
+
 
 
 
