@@ -4,7 +4,7 @@ let handler = {
         	console.log(`TEST .${propKey} to ${value}`);
 	}
 };
-let proxy = new Proxy($('#holder'), handler);
+let proxy = new Proxy(target, handler);
 
 
 
