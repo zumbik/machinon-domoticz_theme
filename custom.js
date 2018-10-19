@@ -8,7 +8,7 @@ let handler = {
 let proxy = new Proxy(target, handler);
 
 
-
+console.log('TEST ');
 
 
 
