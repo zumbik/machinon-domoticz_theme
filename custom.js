@@ -1,8 +1,9 @@
 let target = {};
 let handler = {
-	set(target, propKey, value, receiver) {
-        	console.log(`TEST .${propKey} to ${value}`);
-	}
+    get(target, propKey, receiver) {
+        console.log('get ' + propKey);
+        return 123;
+    }
 };
 let proxy = new Proxy(target, handler);
 
