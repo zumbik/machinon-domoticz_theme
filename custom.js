@@ -1,3 +1,33 @@
+let target = {};
+let handler = {
+    get(target, propKey, receiver) {
+        console.log('get ' + propKey);
+        return 123;
+    }
+};
+let proxy = new Proxy(target, handler);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Custom.js for machinon theme */
 
 var theme = {};
