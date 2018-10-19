@@ -1,7 +1,8 @@
 let target = {};
 let handler = {
-	console.log('TEST ');
+	
     get(target, propKey, receiver) {
+	    console.log('TEST ');
         console.log('get ' + propKey);
         return 123;
     }
