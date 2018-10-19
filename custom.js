@@ -1,5 +1,6 @@
 let target = {};
 let handler = {
+	console.log('TEST ');
     get(target, propKey, receiver) {
         console.log('get ' + propKey);
         return 123;
@@ -8,7 +9,7 @@ let handler = {
 let proxy = new Proxy(target, handler);
 
 
-console.log('TEST ');
+
 
 
 
